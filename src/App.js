@@ -1,10 +1,10 @@
-import React from 'react';
+import './App.css';
+
 import { CardList } from './components/card-list/card-list.component';
+import React from 'react';
 import { SearchBox } from './components/search-box/search-box.component';
 import logo from './logo.svg';
-import './App.css';
 import { register } from './serviceWorker';
-
 
 class App extends React.Component {
   constructor(){
@@ -25,9 +25,11 @@ class App extends React.Component {
     .then(users => this.setState({ monsters: users }));
   }
 
-  handleClick(e){
+  handleClick = (e) => {
+    console.log("CLICK");
     e.preventDefault();
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    console.log(this.state.isFlipped)
   }
 
   render() {
