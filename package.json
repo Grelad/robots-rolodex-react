@@ -1,6 +1,6 @@
 {
   "name": "first-app",
-  "homepage": "https://grelad.github.io/robots-rolodex-react/",
+  "homepage": "https://grelad.github.io/robots-rolodex-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -15,8 +15,12 @@ export const Card = (props) => {
             <p> {props.monster.email}</p>
         </div>
         <div onClick={handleClick} className='card-container'>
-            <p> {props.monster.phone} </p>
-            <p> {props.monster.website}</p>
+            <p><strong>Phone:</strong> {props.monster.phone} </p>
+            <p><strong>Address:</strong> {props.monster.address.street},
+                {props.monster.address.suite},
+                {props.monster.address.city},
+                {props.monster.address.zipcode}</p>
+            <p><strong>Website:</strong> {props.monster.website}</p>
         </div>
     </ReactCardFlip>
 );
