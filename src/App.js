@@ -13,9 +13,7 @@ class App extends React.Component {
     this.state = {
       monsters: [],
       searchField: '',
-      isFlipped: false
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
 
@@ -25,12 +23,6 @@ class App extends React.Component {
     .then(users => this.setState({ monsters: users }));
   }
 
-  handleClick = (e) => {
-    console.log("CLICK");
-    e.preventDefault();
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-    console.log(this.state.isFlipped)
-  }
 
   render() {
     const { monsters, searchField } = this.state;
